@@ -1,63 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Журнал проекта on Lifelong Dream</title><link>/journal/</link><description>Recent content in Журнал проекта on Lifelong Dream</description><generator>Hugo</generator><language>ru-ru</language><lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="/journal/index.xml" rel="self" type="application/rss+xml"/><item><title>Неделя 3: Создание Марка и Пикс</title><link>/journal/week3/</link><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><guid>/journal/week3/</guid><description>&lt;h2 id="что-сделано">Что сделано:&lt;/h2>
-&lt;h2 id="марк-портрет-травмированного-подростка">Марк: Портрет травмированного подростка&lt;/h2>
-&lt;p>Мы завершили визуальную концепцию главного героя, воплотив в его образе:&lt;/p>
-&lt;p>&lt;strong>Физические характеристики:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Сутулая поза, вжатая в плечи голова&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Тусклая одежда на размер больше (свитер с растянутыми рукавами, мятые брюки)&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Видимые синяки на руках и шее, шрамы на запястьях&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Цветовая гамма:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Приглушенные серо-коричневые тона&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Детали:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Грязные ногти, потрескавшиеся губы&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Пустой взгляд, но с искрой страха в моменты опасности&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&amp;ldquo;Марк должен вызывать инстинктивное желание защитить его у игроков&amp;rdquo; (Художник персонажей)&lt;/p></description></item><item><title>Неделя 2: Создание чекпоинта</title><link>/journal/week2/</link><pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate><guid>/journal/week2/</guid><description>&lt;h2 id="что-сделано">Что сделано:&lt;/h2>
-&lt;p>&lt;strong>Чекпоинт &amp;ldquo;Почтовая велопарковка&amp;rdquo;&lt;/strong>
-Мы создали атмосферный пункт сохранения в виде:&lt;/p>
-&lt;p>Старинного чугунного фонаря с витражными стеклами, излучающего теплый свет&lt;/p>
-&lt;p>&lt;strong>Сказочного велосипеда Пикс, сочетающего:&lt;/strong>&lt;/p>
-&lt;p>✓ Раму классического байка 50-х годов&lt;br>
-✓ Мотоциклетный руль с блестящими рычагами&lt;br>
-✓ Турбо-насадки из латунных труб и шестеренок&lt;br>
-✓ Кожаное седло с выгравированными созвездиями&lt;/p>
-&lt;p>К заднему колесу крепится сумка для писем-снов со:&lt;/p>
-&lt;ul>
-&lt;li>Светящимися конвертами&lt;/li>
-&lt;li>Свисающими печатями в виде лун&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Особенности дизайна:&lt;/strong>&lt;br>
-• При активации фонарь зажигается голубым пламенем&lt;br>
-• В воздухе появляются мерцающие частицы (как светлячки)&lt;br>
-• Из сумки доносятся шёпот обрывков снов&lt;/p></description></item><item><title>Неделя 1: Создание концепт артов первой части Парка Атракционов</title><link>/journal/week1/</link><pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate><guid>/journal/week1/</guid><description>&lt;h2 id="что-сделано">Что сделано:&lt;/h2>
-&lt;p>На этой неделе мы завершили концепт вводной зоны парка — моста, который становится порталом между реальностью и миром снов.&lt;/p>
-&lt;p>&lt;strong>Ключевые элементы:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Арочный мост с разрушенным центром, где обломки застыли в воздухе — первый намёк на искажённую логику сна.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Живой пруд под мостом:&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Вода отражает небо, но при приближении в ней проявляются тени кошмаров.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Прорисвали Аквариум, куда будет проваливаться персонаж при промахе.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Лодки-лебеди с неестественно гибкими шеями, будто следящие за игроком&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Журнал проекта on Lifelong Dream</title>
+    <link>http://localhost:1313/journal/</link>
+    <description>Recent content in Журнал проекта on Lifelong Dream</description>
+    <generator>Hugo</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/journal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Неделя 3: Создание Марка и Пикс</title>
+      <link>http://localhost:1313/journal/week3/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/journal/week3/</guid>
+      <description>&lt;h2 id=&#34;что-сделано&#34;&gt;Что сделано:&lt;/h2&gt;&#xA;&lt;h2 id=&#34;марк-портрет-травмированного-подростка&#34;&gt;Марк: Портрет травмированного подростка&lt;/h2&gt;&#xA;&lt;p&gt;Мы завершили визуальную концепцию главного героя, воплотив в его образе:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Физические характеристики:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Сутулая поза, вжатая в плечи голова&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Тусклая одежда на размер больше (свитер с растянутыми рукавами, мятые брюки)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Видимые синяки на руках и шее, шрамы на запястьях&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Цветовая гамма:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Приглушенные серо-коричневые тона&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Детали:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Грязные ногти, потрескавшиеся губы&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Пустой взгляд, но с искрой страха в моменты опасности&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&amp;ldquo;Марк должен вызывать инстинктивное желание защитить его у игроков&amp;rdquo; (Художник персонажей)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Неделя 2: Создание чекпоинта</title>
+      <link>http://localhost:1313/journal/week2/</link>
+      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/journal/week2/</guid>
+      <description>&lt;h2 id=&#34;что-сделано&#34;&gt;Что сделано:&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Чекпоинт &amp;ldquo;Почтовая велопарковка&amp;rdquo;&lt;/strong&gt;&#xA;Мы создали атмосферный пункт сохранения в виде:&lt;/p&gt;&#xA;&lt;p&gt;Старинного чугунного фонаря с витражными стеклами, излучающего теплый свет&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Сказочного велосипеда Пикс, сочетающего:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;✓ Раму классического байка 50-х годов&lt;br&gt;&#xA;✓ Мотоциклетный руль с блестящими рычагами&lt;br&gt;&#xA;✓ Турбо-насадки из латунных труб и шестеренок&lt;br&gt;&#xA;✓ Кожаное седло с выгравированными созвездиями&lt;/p&gt;&#xA;&lt;p&gt;К заднему колесу крепится сумка для писем-снов со:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Светящимися конвертами&lt;/li&gt;&#xA;&lt;li&gt;Свисающими печатями в виде лун&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Особенности дизайна:&lt;/strong&gt;&lt;br&gt;&#xA;• При активации фонарь зажигается голубым пламенем&lt;br&gt;&#xA;• В воздухе появляются мерцающие частицы (как светлячки)&lt;br&gt;&#xA;• Из сумки доносятся шёпот обрывков снов&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Неделя 1: Создание концепт артов первой части Парка Атракционов</title>
+      <link>http://localhost:1313/journal/week1/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/journal/week1/</guid>
+      <description>&lt;h2 id=&#34;что-сделано&#34;&gt;Что сделано:&lt;/h2&gt;&#xA;&lt;p&gt;На этой неделе мы завершили концепт вводной зоны парка — моста, который становится порталом между реальностью и миром снов.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Ключевые элементы:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Арочный мост с разрушенным центром, где обломки застыли в воздухе — первый намёк на искажённую логику сна.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Живой пруд под мостом:&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Вода отражает небо, но при приближении в ней проявляются тени кошмаров.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Прорисвали Аквариум, куда будет проваливаться персонаж при промахе.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Лодки-лебеди с неестественно гибкими шеями, будто следящие за игроком&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

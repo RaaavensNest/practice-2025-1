@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ru-ru">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Lifelong Dream</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Пошаговое руководство по созданию Star Wars Budget Edition 1.0 на SFML
+Введение
+Это руководство по созданию игры Star Wars Budget Edition 1.0.
+1. Подготовка проекта
+1.1. Настройка окружения
+
+
+Установила:
+
+Компилятор (GCC/MinGW или MSVC)
+Библиотеку SFML (через vcpkg или официальный установщик)
+IDE (VS Code, Visual Studio, CLion)
+
+
+
+Создала структуру папок:
+/SpaceInvaders
+├── Audio/
+├── Fonts/
+├── Images/
+├── include/
+└── src/
+
+
+Структура проекта
+ SpaceInvaders/
+ ├── Audio/
+ │   ├── back_sound.mp3
+ │   ├── death_sound.mp3
+ │   └── tank_shot.mp3
+ ├── Fonts/
+ │   └── game_font.ttf
+ ├── Images/
+ │   ├── bullet_v2.png
+ │   ├── character_v2.png
+ │   ├── deffault_enemy.png
+ │   ├── spike_enemy.png
+ │   └── tank_enemy.png
+ ├── include/
+ │   ├── Entity_class.h
+ │   ├── Infinity_mode.h
+ │   ├── Render.h
+ │   ├── enemies.h
+ │   ├── game.h
+ │   ├── global_variables.h
+ │   └── sounds.h
+ └── src/
+     └── main.cpp
+
+
+
+2. Базовые компоненты (шаг за шагом)
+2.1. Шаг 1: Создание Entity_class.h
+// include/Entity_class.h
+#pragma once
+#include &lt;SFML/Graphics.hpp&gt;
+
+class Entity {
+protected:
+    int health;
+    sf::Sprite sprite;
+public:
+    Entity(int hp) : health(hp) {}
+    
+    void draw(sf::RenderWindow&amp; window) { window.draw(sprite); }
+    void setSprite(const sf::Sprite&amp; spr) { sprite = spr; }
+    int getHealth() const { return health; }
+};
+Что делаю:">
+    <meta name="generator" content="Hugo 0.147.4">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="../ananke/css/main.min.css" >
+
+
+
+  
+    <link rel="stylesheet" href="../css/custom.css">
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/my_game/game_guide.html">
+    
+
+    <meta property="og:url" content="http://localhost:1313/my_game/game_guide.html">
+  <meta property="og:site_name" content="Lifelong Dream">
+  <meta property="og:title" content="Lifelong Dream">
+  <meta property="og:description" content="Пошаговое руководство по созданию Star Wars Budget Edition 1.0 на SFML Введение Это руководство по созданию игры Star Wars Budget Edition 1.0.
+1. Подготовка проекта 1.1. Настройка окружения Установила:
+Компилятор (GCC/MinGW или MSVC) Библиотеку SFML (через vcpkg или официальный установщик) IDE (VS Code, Visual Studio, CLion) Создала структуру папок:
+/SpaceInvaders├── Audio/├── Fonts/├── Images/├── include/└── src/ Структура проекта
+SpaceInvaders/├── Audio/│ ├── back_sound.mp3│ ├── death_sound.mp3│ └── tank_shot.mp3├── Fonts/│ └── game_font.ttf├── Images/│ ├── bullet_v2.png│ ├── character_v2.png│ ├── deffault_enemy.png│ ├── spike_enemy.png│ └── tank_enemy.png├── include/│ ├── Entity_class.h│ ├── Infinity_mode.h│ ├── Render.h│ ├── enemies.h│ ├── game.h│ ├── global_variables.h│ └── sounds.h└── src/└── main.cpp2. Базовые компоненты (шаг за шагом) 2.1. Шаг 1: Создание Entity_class.h // include/Entity_class.h #pragma once #include &lt;SFML/Graphics.hpp&gt; class Entity { protected: int health; sf::Sprite sprite; public: Entity(int hp) : health(hp) {} void draw(sf::RenderWindow&amp; window) { window.draw(sprite); } void setSprite(const sf::Sprite&amp; spr) { sprite = spr; } int getHealth() const { return health; } }; Что делаю:">
+  <meta property="og:locale" content="ru_ru">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="my_game">
+
+  <meta itemprop="name" content="Lifelong Dream">
+  <meta itemprop="description" content="Пошаговое руководство по созданию Star Wars Budget Edition 1.0 на SFML Введение Это руководство по созданию игры Star Wars Budget Edition 1.0.
+1. Подготовка проекта 1.1. Настройка окружения Установила:
+Компилятор (GCC/MinGW или MSVC) Библиотеку SFML (через vcpkg или официальный установщик) IDE (VS Code, Visual Studio, CLion) Создала структуру папок:
+/SpaceInvaders├── Audio/├── Fonts/├── Images/├── include/└── src/ Структура проекта
+SpaceInvaders/├── Audio/│ ├── back_sound.mp3│ ├── death_sound.mp3│ └── tank_shot.mp3├── Fonts/│ └── game_font.ttf├── Images/│ ├── bullet_v2.png│ ├── character_v2.png│ ├── deffault_enemy.png│ ├── spike_enemy.png│ └── tank_enemy.png├── include/│ ├── Entity_class.h│ ├── Infinity_mode.h│ ├── Render.h│ ├── enemies.h│ ├── game.h│ ├── global_variables.h│ └── sounds.h└── src/└── main.cpp2. Базовые компоненты (шаг за шагом) 2.1. Шаг 1: Создание Entity_class.h // include/Entity_class.h #pragma once #include &lt;SFML/Graphics.hpp&gt; class Entity { protected: int health; sf::Sprite sprite; public: Entity(int hp) : health(hp) {} void draw(sf::RenderWindow&amp; window) { window.draw(sprite); } void setSprite(const sf::Sprite&amp; spr) { sprite = spr; } int getHealth() const { return health; } }; Что делаю:">
+  <meta itemprop="wordCount" content="725">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lifelong Dream">
+  <meta name="twitter:description" content="Пошаговое руководство по созданию Star Wars Budget Edition 1.0 на SFML Введение Это руководство по созданию игры Star Wars Budget Edition 1.0.
+1. Подготовка проекта 1.1. Настройка окружения Установила:
+Компилятор (GCC/MinGW или MSVC) Библиотеку SFML (через vcpkg или официальный установщик) IDE (VS Code, Visual Studio, CLion) Создала структуру папок:
+/SpaceInvaders├── Audio/├── Fonts/├── Images/├── include/└── src/ Структура проекта
+SpaceInvaders/├── Audio/│ ├── back_sound.mp3│ ├── death_sound.mp3│ └── tank_shot.mp3├── Fonts/│ └── game_font.ttf├── Images/│ ├── bullet_v2.png│ ├── character_v2.png│ ├── deffault_enemy.png│ ├── spike_enemy.png│ └── tank_enemy.png├── include/│ ├── Entity_class.h│ ├── Infinity_mode.h│ ├── Render.h│ ├── enemies.h│ ├── game.h│ ├── global_variables.h│ └── sounds.h└── src/└── main.cpp2. Базовые компоненты (шаг за шагом) 2.1. Шаг 1: Создание Entity_class.h // include/Entity_class.h #pragma once #include &lt;SFML/Graphics.hpp&gt; class Entity { protected: int health; sf::Sprite sprite; public: Entity(int hp) : health(hp) {} void draw(sf::RenderWindow&amp; window) { window.draw(sprite); } void setSprite(const sf::Sprite&amp; spr) { sprite = spr; } int getHealth() const { return health; } }; Что делаю:">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="../" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Lifelong Dream
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="../home/" title="Главная page">
+              Главная
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="../about/" title="О проекте page">
+              О проекте
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="../resources/" title="Ресурсы page">
+              Ресурсы
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="../team/" title="Команда page">
+              Команда
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="../journal/" title="Журнал page">
+              Журнал
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="../my_game/" title="Моя игра page">
+              Моя игра
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="../reports/" title="Мероприятия page">
+              Мероприятия
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Моя игра
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="пошаговое-руководство-по-созданию-star-wars-budget-edition-10-на-sfml"><strong>Пошаговое руководство по созданию Star Wars Budget Edition 1.0 на SFML</strong></h1>
+<p>Введение
+Это руководство по созданию игры Star Wars Budget Edition 1.0.</p>
+<h2 id="1-подготовка-проекта"><strong>1. Подготовка проекта</strong></h2>
+<h3 id="11-настройка-окружения"><strong>1.1. Настройка окружения</strong></h3>
+<ol>
+<li>
+<p>Установила:</p>
+<ul>
+<li>Компилятор (GCC/MinGW или MSVC)</li>
+<li>Библиотеку SFML (через vcpkg или официальный установщик)</li>
+<li>IDE (VS Code, Visual Studio, CLion)</li>
+</ul>
+</li>
+<li>
+<p>Создала структуру папок:</p>
+<pre tabindex="0"><code>/SpaceInvaders
+├── Audio/
+├── Fonts/
+├── Images/
+├── include/
+└── src/
+</code></pre></li>
+<li>
+<p>Структура проекта</p>
+<pre><code> SpaceInvaders/
+ ├── Audio/
+ │   ├── back_sound.mp3
+ │   ├── death_sound.mp3
+ │   └── tank_shot.mp3
+ ├── Fonts/
+ │   └── game_font.ttf
+ ├── Images/
+ │   ├── bullet_v2.png
+ │   ├── character_v2.png
+ │   ├── deffault_enemy.png
+ │   ├── spike_enemy.png
+ │   └── tank_enemy.png
+ ├── include/
+ │   ├── Entity_class.h
+ │   ├── Infinity_mode.h
+ │   ├── Render.h
+ │   ├── enemies.h
+ │   ├── game.h
+ │   ├── global_variables.h
+ │   └── sounds.h
+ └── src/
+     └── main.cpp
+</code></pre>
+</li>
+</ol>
+<h2 id="2-базовые-компоненты-шаг-за-шагом"><strong>2. Базовые компоненты (шаг за шагом)</strong></h2>
+<h3 id="21-шаг-1-создание-entity_"><strong>2.1. Шаг 1: Создание Entity_class.h</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// include/Entity_class.h
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#pragma once
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;SFML/Graphics.hpp&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Entity</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">protected</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> health;
+</span></span><span style="display:flex;"><span>    sf<span style="color:#f92672">::</span>Sprite sprite;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    Entity(<span style="color:#66d9ef">int</span> hp) <span style="color:#f92672">:</span> health(hp) {}
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>(sf<span style="color:#f92672">::</span>RenderWindow<span style="color:#f92672">&amp;</span> window) { window.draw(sprite); }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setSprite</span>(<span style="color:#66d9ef">const</span> sf<span style="color:#f92672">::</span>Sprite<span style="color:#f92672">&amp;</span> spr) { sprite <span style="color:#f92672">=</span> spr; }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getHealth</span>() <span style="color:#66d9ef">const</span> { <span style="color:#66d9ef">return</span> health; }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p><strong>Что делаю</strong>:</p>
+<ul>
+<li>Создаю базовый класс для всех игровых объектов</li>
+<li>Добавляю здоровье и спрайт</li>
+</ul>
+<h3 id="22-шаг-2-настройте-глобальные-переменные"><strong>2.2. Шаг 2: Настройте глобальные переменные</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// include/global_variables.h
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#pragma once
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;Entity_class.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Окно
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> WIDTH <span style="color:#f92672">=</span> <span style="color:#ae81ff">600</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> HEIGHT <span style="color:#f92672">=</span> <span style="color:#ae81ff">400</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Игрок
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Entity <span style="color:#a6e22e">player</span>(<span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span>sf<span style="color:#f92672">::</span>Texture playerTex;
+</span></span><span style="display:flex;"><span>sf<span style="color:#f92672">::</span>Sprite playerSprite;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Враги
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>Entity<span style="color:#f92672">&gt;</span> enemies;
+</span></span></code></pre></div><p><strong>Зачем</strong>:</p>
+<ul>
+<li>Централизованное хранение ключевых объектов</li>
+<li>Легкий доступ из разных модулей</li>
+</ul>
+<pre tabindex="0"><code class="language-#pragma" data-lang="#pragma">#include &lt;SFML/Graphics.hpp&gt;
+#include &#34;Entity_class.h&#34;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+
+// Основные переменные
+sf::Clock game_clock;
+float deltaTime;
+int width = 600, height = 400;
+int timer = 0;
+bool death_m = 0;
+int global_score = 0;
+int round_count = 1;
+
+// Очки за врагов
+int score_added_by_spike = 150;
+int score_added_by_tank = 100;
+int score_added_by_deffault_enemy = 33;
+
+// Текстовые элементы
+sf::Font font;
+sf::Text scoreText;
+sf::Text healthText;
+
+// Система пуль
+Entity bullet;
+sf::Sprite bullet_sprite;
+// ... (остальные переменные)
+</code></pre><h2 id="3-основная-игровая-логика"><strong>3. Основная игровая логика</strong></h2>
+<h3 id="31-шаг-3-инициализация-игры-gameh"><strong>3.1. Шаг 3: Инициализация игры (game.h)</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">initGame</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Загрузка текстур
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>playerTex.loadFromFile(<span style="color:#e6db74">&#34;Images/player.png&#34;</span>)) {
+</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>cerr <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Error loading player texture!&#34;</span>;
+</span></span><span style="display:flex;"><span>        exit(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    playerSprite.setTexture(playerTex);
+</span></span><span style="display:flex;"><span>    player.setSprite(playerSprite);
+</span></span><span style="display:flex;"><span>    playerSprite.setPosition(WIDTH<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, HEIGHT<span style="color:#f92672">-</span><span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Обязательно к проверке</strong>:</p>
+<ul>
+<li>Файл <code>player.png</code> лежит в <code>/Images</code></li>
+<li>Текстура загружается без ошибок</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">game</span>() {
+</span></span><span style="display:flex;"><span>    preload();
+</span></span><span style="display:flex;"><span>    sf<span style="color:#f92672">::</span>RenderWindow window(sf<span style="color:#f92672">::</span>VideoMode(width, height), <span style="color:#e6db74">&#34;Space Invaders&#34;</span>);
+</span></span><span style="display:flex;"><span>    window.setFramerateLimit(<span style="color:#ae81ff">60</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (window.isOpen()) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Обработка событий
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        sf<span style="color:#f92672">::</span>Event event;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (window.pollEvent(event)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (event.type <span style="color:#f92672">==</span> sf<span style="color:#f92672">::</span>Event<span style="color:#f92672">::</span>Closed) window.close();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (event.type <span style="color:#f92672">==</span> sf<span style="color:#f92672">::</span>Event<span style="color:#f92672">::</span>KeyPressed <span style="color:#f92672">&amp;&amp;</span> 
+</span></span><span style="display:flex;"><span>                event.key.code <span style="color:#f92672">==</span> sf<span style="color:#f92672">::</span>Keyboard<span style="color:#f92672">::</span>Space) {
+</span></span><span style="display:flex;"><span>                start_bullet(window);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Игровая логика
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (character.get_health() <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>            game_load();
+</span></span><span style="display:flex;"><span>            deltaTime <span style="color:#f92672">=</span> game_clock.restart().asSeconds();
+</span></span><span style="display:flex;"><span>            character_contoller(window);
+</span></span><span style="display:flex;"><span>            window.clear();
+</span></span><span style="display:flex;"><span>            render_function(window);
+</span></span><span style="display:flex;"><span>            window.display();
+</span></span><span style="display:flex;"><span>            timer<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>            infinity_mode();
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Обработка смерти
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### **3.2. Шаг 4: Создание врагов (enemies.h)**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">```</span>cpp
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> createEnemies() {
+</span></span><span style="display:flex;"><span>    sf<span style="color:#f92672">::</span>Texture enemyTex;
+</span></span><span style="display:flex;"><span>    enemyTex.loadFromFile(<span style="color:#e6db74">&#34;Images/enemy.png&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">8</span>; <span style="color:#f92672">++</span>i) {
+</span></span><span style="display:flex;"><span>        Entity <span style="color:#a6e22e">enemy</span>(<span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>        sf<span style="color:#f92672">::</span>Sprite spr;
+</span></span><span style="display:flex;"><span>        spr.setTexture(enemyTex);
+</span></span><span style="display:flex;"><span>        spr.setPosition(<span style="color:#ae81ff">50</span> <span style="color:#f92672">+</span> i<span style="color:#f92672">*</span><span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>        enemy.setSprite(spr);
+</span></span><span style="display:flex;"><span>        enemies.push_back(enemy);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Настройка</strong>:</p>
+<ul>
+<li>Количество врагов (8)</li>
+<li>Позиционирование (50 + i*70)</li>
+</ul>
+<h2 id="4-система-рендеринга"><strong>4. Система рендеринга</strong></h2>
+<h3 id="41-шаг-5-настройка-отрисовки-renderh"><strong>4.1. Шаг 5: Настройка отрисовки (Render.h)</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">render_function</span>(sf<span style="color:#f92672">::</span>RenderWindow<span style="color:#f92672">&amp;</span> window) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Отрисовка персонажа
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    character.Entity_draw(window);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Отрисовка пули
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (bullet_active) {
+</span></span><span style="display:flex;"><span>        bullet.Entity_draw(window);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Отрисовка врагов
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">8</span>; <span style="color:#f92672">++</span>i) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (default_enemies[i].get_health() <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>            default_enemies[i].Entity_draw(window);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Оптимизация</strong>:</p>
+<ul>
+<li>Добавила <code>window.setVerticalSyncEnabled(true)</code> для плавности</li>
+</ul>
+<h2 id="5-игровой-цикл"><strong>5. Игровой цикл</strong></h2>
+<h3 id="51-шаг-6-реализация-maincpp"><strong>5.1. Шаг 6: Реализация main.cpp</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// src/main.cpp
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;game.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    initGame();
+</span></span><span style="display:flex;"><span>    createEnemies();
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    sf<span style="color:#f92672">::</span>RenderWindow window(sf<span style="color:#f92672">::</span>VideoMode(WIDTH, HEIGHT), <span style="color:#e6db74">&#34;Space Invaders&#34;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (window.isOpen()) {
+</span></span><span style="display:flex;"><span>        sf<span style="color:#f92672">::</span>Event event;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (window.pollEvent(event)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (event.type <span style="color:#f92672">==</span> sf<span style="color:#f92672">::</span>Event<span style="color:#f92672">::</span>Closed)
+</span></span><span style="display:flex;"><span>                window.close();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        render(window);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Проверка</strong>:</p>
+<ul>
+<li>Запуск игру - должно появиться окно с игроком и врагами</li>
+</ul>
+<h2 id="6-добавление-функциональность"><strong>6. Добавление функциональность</strong></h2>
+<h3 id="61-шаг-7-управление-игроком"><strong>6.1. Шаг 7: Управление игроком</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// game.h
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">handleInput</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (sf<span style="color:#f92672">::</span>Keyboard<span style="color:#f92672">::</span>isKeyPressed(sf<span style="color:#f92672">::</span>Keyboard<span style="color:#f92672">::</span>Left)) {
+</span></span><span style="display:flex;"><span>        playerSprite.move(<span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (sf<span style="color:#f92672">::</span>Keyboard<span style="color:#f92672">::</span>isKeyPressed(sf<span style="color:#f92672">::</span>Keyboard<span style="color:#f92672">::</span>Right)) {
+</span></span><span style="display:flex;"><span>        playerSprite.move(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Добавление в цикл</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (window.isOpen()) {
+</span></span><span style="display:flex;"><span>    handleInput();
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ... остальной код
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h3 id="62-шаг-8-система-стрельбы"><strong>6.2. Шаг 8: Система стрельбы</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Добавьте в global_variables.h
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Entity bullet;
+</span></span><span style="display:flex;"><span>sf<span style="color:#f92672">::</span>Sprite bulletSprite;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> isBulletActive <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// В game.h
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">shoot</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>isBulletActive) {
+</span></span><span style="display:flex;"><span>        bulletSprite.setPosition(
+</span></span><span style="display:flex;"><span>            playerSprite.getPosition().x <span style="color:#f92672">+</span> playerSprite.getGlobalBounds().width<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>            playerSprite.getPosition().y
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>        isBulletActive <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="7-завершающие-шаги"><strong>7. Завершающие шаги</strong></h2>
+<h3 id="71-шаг-9-коллизии-и-очки"><strong>7.1. Шаг 9: Коллизии и очки</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">update</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (isBulletActive) {
+</span></span><span style="display:flex;"><span>        bulletSprite.move(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Проверка столкновений
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> enemy : enemies) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (bulletSprite.getGlobalBounds().intersects(
+</span></span><span style="display:flex;"><span>                enemy.getSprite().getGlobalBounds())) {
+</span></span><span style="display:flex;"><span>                isBulletActive <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>                enemy.setHealth(<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="72-шаг-10-добавление-звуков-soundsh"><strong>7.2. Шаг 10: Добавление звуков (sounds.h)</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Audio</span> {
+</span></span><span style="display:flex;"><span>    sf<span style="color:#f92672">::</span>SoundBuffer shootBuffer;
+</span></span><span style="display:flex;"><span>    sf<span style="color:#f92672">::</span>Sound shootSound;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    Audio() {
+</span></span><span style="display:flex;"><span>        shootBuffer.loadFromFile(<span style="color:#e6db74">&#34;Audio/shoot.wav&#34;</span>);
+</span></span><span style="display:flex;"><span>        shootSound.setBuffer(shootBuffer);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">playShoot</span>() { shootSound.play(); }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h2 id="8-запуск-и-тестирование"><strong>8. Запуск и тестирование</strong></h2>
+<ol>
+<li>Сбор проекта:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>g++ src/main.cpp -o game -lsfml-graphics -lsfml-window -lsfml-system
+</span></span></code></pre></div></li>
+<li>Запуск:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./game
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="9-демонстрация-итогового-результата"><strong>9. Демонстрация итогового результата</strong></h2>
+<p><img src="../video/Game.mkv" alt="Видеопрезентация"></p>
+<p><img src="../video/%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F.mkv" alt="Видеопрезентация"></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  Lifelong Dream 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

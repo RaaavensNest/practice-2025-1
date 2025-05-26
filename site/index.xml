@@ -1,105 +1,103 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lifelong Dream</title><link>/</link><description>Recent content on Lifelong Dream</description><generator>Hugo</generator><language>ru-ru</language><lastBuildDate>Thu, 15 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Ресурсы</title><link>/resources/</link><pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate><guid>/resources/</guid><description>&lt;h2 id="полезные-ссылки">Полезные ссылки:&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://sites.google.com/view/lifelong-dream-artbook/%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Артбук Lifelong Dream&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://docs.google.com/document/d/1z0-qOL0v92FYt0-IgYUjIUI5g7e2PJaNeFWulaobopE/edit?tab=t.0">Сюжет&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://docs.google.com/document/d/1z0-qOL0v92FYt0-IgYUjIUI5g7e2PJaNeFWulaobopE/edit?tab=t.0">Концепт персонажей&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://docs.google.com/document/d/1z0-qOL0v92FYt0-IgYUjIUI5g7e2PJaNeFWulaobopE/edit?tab=t.0">Парк развлечений&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Артбук&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://sites.google.com/view/lifelong-dream-artbook/%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">Артбук Lifelong Dream&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Этот артбук — путешествие по изнанке снов, где каждая страница дышит противоречивой красотой кошмаров. Вы увидите, как рождались персонажи: Марк, чей дизайн эволюционировал от обычного подростка до измождённого героя с тенями под глазами; Пикс с её звёздной кожей и сумкой снов, в ранних концептах носившая крылья; кошмары вроде клоуна-цветка с головой-шаром, чьи зубы в итоге стали похожи на гнилые леденцы.&lt;/p></description></item><item><title>О проекте</title><link>/about/</link><pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate><guid>/about/</guid><description>&lt;p>&lt;img src="./images/starsss.png" alt="Украшение">&lt;/p>
-&lt;p>&lt;strong>Жуткие истории, рожденные из ночных кошмаров&lt;/strong>&lt;/p>
-&lt;p>Lifelong Dream - это 2,5-мерная психологическая метроидизация, придуманная студентами Московского политехнического университета Ильей Корнясовым и Кириллом Емельяновым совместно с командой энтузиастов-программистов и художников.
-То, что начиналось как учебный проект, превратилось в мрачное и поэтичное исследование травмы, где каждый прыжок, загадка и враг отражают надломленную психику героя.&lt;/p>
-&lt;p>&lt;img src="./images/adornment1.png" alt="Украшение">&lt;/p>
-&lt;h2 id="наша-идея">Наша идея&lt;/h2>
-&lt;p>&lt;img src="./images/checkpoint.png" alt="Чекпоинт">&lt;/p>
-&lt;p>Мы хотели создать игру, которая похожа на искаженную колыбельную — в ней смешаны ностальгия по детству (ярмарочные палатки в карамельную полоску) и физический ужас (осьминоги-уборщики, анимированные карусельные лошадки) и отдаёт дань инди-классике (исследование мира как в Hollow Knight, эмоциональная глубина Celeste), но при этом остаётся уникальной.&lt;/p></description></item><item><title>Главная</title><link>/home/</link><pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate><guid>/home/</guid><description>&lt;p>&lt;img src="./images/logo.png" alt="Обложка сайта">&lt;/p>
-&lt;p>Марк - мальчик, утопающий в горе и страхе. Мучимый ночными кошмарами о
-своем жестоком отце, он избегает сна, пока Пикс, почтальон из снов,
-не стучит в его окно. Вместе они убегают в яркий мир грез
-— только для того, чтобы обнаружить, что его уже поглощают тени, порожденные травмами Марка.&lt;/p>
-&lt;p>&lt;img src="./images/adornment1.png" alt="Украшение">&lt;/p>
-&lt;h2 id="что-будет-ждать-тебя-на-пути">Что будет ждать тебя на пути?&lt;/h2>
-&lt;p>&lt;strong>⭐Решайте головоломки&lt;/strong>&lt;/p>
-&lt;p>Используй солнечные лучи, чтобы ослабить ночные кошмары.&lt;/p>
-&lt;p>&lt;img src="./images/sun.jpg" alt="Карточка 1">&lt;/p>
-&lt;p>&lt;strong>⭐Сражайся!&lt;/strong>&lt;/p></description></item><item><title>Неделя 3: Создание Марка и Пикс</title><link>/journal/week3/</link><pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate><guid>/journal/week3/</guid><description>&lt;h2 id="что-сделано">Что сделано:&lt;/h2>
-&lt;h2 id="марк-портрет-травмированного-подростка">Марк: Портрет травмированного подростка&lt;/h2>
-&lt;p>Мы завершили визуальную концепцию главного героя, воплотив в его образе:&lt;/p>
-&lt;p>&lt;strong>Физические характеристики:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Сутулая поза, вжатая в плечи голова&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Тусклая одежда на размер больше (свитер с растянутыми рукавами, мятые брюки)&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Видимые синяки на руках и шее, шрамы на запястьях&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Цветовая гамма:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Приглушенные серо-коричневые тона&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Детали:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Грязные ногти, потрескавшиеся губы&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Пустой взгляд, но с искрой страха в моменты опасности&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&amp;ldquo;Марк должен вызывать инстинктивное желание защитить его у игроков&amp;rdquo; (Художник персонажей)&lt;/p></description></item><item><title>Неделя 2: Создание чекпоинта</title><link>/journal/week2/</link><pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate><guid>/journal/week2/</guid><description>&lt;h2 id="что-сделано">Что сделано:&lt;/h2>
-&lt;p>&lt;strong>Чекпоинт &amp;ldquo;Почтовая велопарковка&amp;rdquo;&lt;/strong>
-Мы создали атмосферный пункт сохранения в виде:&lt;/p>
-&lt;p>Старинного чугунного фонаря с витражными стеклами, излучающего теплый свет&lt;/p>
-&lt;p>&lt;strong>Сказочного велосипеда Пикс, сочетающего:&lt;/strong>&lt;/p>
-&lt;p>✓ Раму классического байка 50-х годов&lt;br>
-✓ Мотоциклетный руль с блестящими рычагами&lt;br>
-✓ Турбо-насадки из латунных труб и шестеренок&lt;br>
-✓ Кожаное седло с выгравированными созвездиями&lt;/p>
-&lt;p>К заднему колесу крепится сумка для писем-снов со:&lt;/p>
-&lt;ul>
-&lt;li>Светящимися конвертами&lt;/li>
-&lt;li>Свисающими печатями в виде лун&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Особенности дизайна:&lt;/strong>&lt;br>
-• При активации фонарь зажигается голубым пламенем&lt;br>
-• В воздухе появляются мерцающие частицы (как светлячки)&lt;br>
-• Из сумки доносятся шёпот обрывков снов&lt;/p></description></item><item><title>Неделя 1: Создание концепт артов первой части Парка Атракционов</title><link>/journal/week1/</link><pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate><guid>/journal/week1/</guid><description>&lt;h2 id="что-сделано">Что сделано:&lt;/h2>
-&lt;p>На этой неделе мы завершили концепт вводной зоны парка — моста, который становится порталом между реальностью и миром снов.&lt;/p>
-&lt;p>&lt;strong>Ключевые элементы:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Арочный мост с разрушенным центром, где обломки застыли в воздухе — первый намёк на искажённую логику сна.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Живой пруд под мостом:&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Вода отражает небо, но при приближении в ней проявляются тени кошмаров.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Прорисвали Аквариум, куда будет проваливаться персонаж при промахе.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Лодки-лебеди с неестественно гибкими шеями, будто следящие за игроком&lt;/p></description></item><item><title>Участники</title><link>/team/</link><pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate><guid>/team/</guid><description>&lt;p>&lt;img src="./images/starsss.png" alt="Украшение">&lt;/p>
-&lt;p>&lt;strong>Тьютор&lt;/strong>&lt;/p>
-&lt;p>⭐Соболь Татьяна Сергеевна&lt;/p>
-&lt;p>&lt;strong>Руководители&lt;/strong>&lt;/p>
-&lt;p>⭐Илья Корниясов&lt;/p>
-&lt;p>⭐Кирилл Емельянов&lt;/p>
-&lt;p>&lt;strong>Программисты&lt;/strong>&lt;/p>
-&lt;p>⭐Алексей Никольский - интеграция моделей и анимации
-⭐Валерия Рынцева - управление квестами и накопление очков
-⭐Денис Мартынов - взаимодействие с ИИ и проработка движений персонажа&lt;br>
-⭐Дмитрий Денисов - иучение механик физики игры&lt;br>
-⭐Дмитрий Пратс - реализация управления с геймпада&lt;br>
-⭐Сергей Лапин - создание универсального класса для отдельных предметов&lt;br>
-⭐Михаил Космылин - замена экранов и тестирование рычагов, стен, подъемников и т.д.&lt;br>
-⭐Тимур Ким - добавление новых механик и исправление основных ошибок&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lifelong Dream</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Lifelong Dream</description>
+    <generator>Hugo</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Thu, 15 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ресурсы</title>
+      <link>http://localhost:1313/resources/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/</guid>
+      <description>&lt;h2 id=&#34;полезные-ссылки&#34;&gt;Полезные ссылки:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://sites.google.com/view/lifelong-dream-artbook/%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0&#34;&gt;Артбук Lifelong Dream&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1z0-qOL0v92FYt0-IgYUjIUI5g7e2PJaNeFWulaobopE/edit?tab=t.0&#34;&gt;Сюжет&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1z0-qOL0v92FYt0-IgYUjIUI5g7e2PJaNeFWulaobopE/edit?tab=t.0&#34;&gt;Концепт персонажей&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1z0-qOL0v92FYt0-IgYUjIUI5g7e2PJaNeFWulaobopE/edit?tab=t.0&#34;&gt;Парк развлечений&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Артбук&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://sites.google.com/view/lifelong-dream-artbook/%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0&#34;&gt;Артбук Lifelong Dream&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Этот артбук — путешествие по изнанке снов, где каждая страница дышит противоречивой красотой кошмаров. Вы увидите, как рождались персонажи: Марк, чей дизайн эволюционировал от обычного подростка до измождённого героя с тенями под глазами; Пикс с её звёздной кожей и сумкой снов, в ранних концептах носившая крылья; кошмары вроде клоуна-цветка с головой-шаром, чьи зубы в итоге стали похожи на гнилые леденцы.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>О проекте</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/starsss.png&#34; alt=&#34;Украшение&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Жуткие истории, рожденные из ночных кошмаров&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Lifelong Dream - это 2,5-мерная психологическая метроидизация, придуманная студентами Московского политехнического университета Ильей Корнясовым и Кириллом Емельяновым совместно с командой энтузиастов-программистов и художников.&#xA;То, что начиналось как учебный проект, превратилось в мрачное и поэтичное исследование травмы, где каждый прыжок, загадка и враг отражают надломленную психику героя.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/adornment1.png&#34; alt=&#34;Украшение&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;наша-идея&#34;&gt;Наша идея&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/checkpoint.png&#34; alt=&#34;Чекпоинт&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Мы хотели создать игру, которая похожа на искаженную колыбельную — в ней смешаны ностальгия по детству (ярмарочные палатки в карамельную полоску) и физический ужас (осьминоги-уборщики, анимированные карусельные лошадки) и отдаёт дань инди-классике (исследование мира как в Hollow Knight, эмоциональная глубина Celeste), но при этом остаётся уникальной.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Главная</title>
+      <link>http://localhost:1313/home/</link>
+      <pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/home/</guid>
+      <description>&lt;h2 id=&#34;автор-некрасова-анастасия-241-339&#34;&gt;Автор: Некрасова Анастасия, 241-339&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/logo.png&#34; alt=&#34;Обложка сайта&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/website_cover.jpg&#34; alt=&#34;Обложка сайта&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Марк - мальчик, утопающий в горе и страхе. Мучимый ночными кошмарами о&#xA;своем жестоком отце, он избегает сна, пока Пикс, почтальон из снов,&#xA;не стучит в его окно. Вместе они убегают в яркий мир грез&#xA;— только для того, чтобы обнаружить, что его уже поглощают тени, порожденные травмами Марка.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/adornment1.png&#34; alt=&#34;Украшение&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;что-будет-ждать-тебя-на-пути&#34;&gt;Что будет ждать тебя на пути?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;⭐Решайте головоломки&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Используй солнечные лучи, чтобы ослабить ночные кошмары.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Неделя 3: Создание Марка и Пикс</title>
+      <link>http://localhost:1313/journal/week3/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/journal/week3/</guid>
+      <description>&lt;h2 id=&#34;что-сделано&#34;&gt;Что сделано:&lt;/h2&gt;&#xA;&lt;h2 id=&#34;марк-портрет-травмированного-подростка&#34;&gt;Марк: Портрет травмированного подростка&lt;/h2&gt;&#xA;&lt;p&gt;Мы завершили визуальную концепцию главного героя, воплотив в его образе:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Физические характеристики:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Сутулая поза, вжатая в плечи голова&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Тусклая одежда на размер больше (свитер с растянутыми рукавами, мятые брюки)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Видимые синяки на руках и шее, шрамы на запястьях&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Цветовая гамма:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Приглушенные серо-коричневые тона&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Детали:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Грязные ногти, потрескавшиеся губы&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Пустой взгляд, но с искрой страха в моменты опасности&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&amp;ldquo;Марк должен вызывать инстинктивное желание защитить его у игроков&amp;rdquo; (Художник персонажей)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Неделя 2: Создание чекпоинта</title>
+      <link>http://localhost:1313/journal/week2/</link>
+      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/journal/week2/</guid>
+      <description>&lt;h2 id=&#34;что-сделано&#34;&gt;Что сделано:&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Чекпоинт &amp;ldquo;Почтовая велопарковка&amp;rdquo;&lt;/strong&gt;&#xA;Мы создали атмосферный пункт сохранения в виде:&lt;/p&gt;&#xA;&lt;p&gt;Старинного чугунного фонаря с витражными стеклами, излучающего теплый свет&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Сказочного велосипеда Пикс, сочетающего:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;✓ Раму классического байка 50-х годов&lt;br&gt;&#xA;✓ Мотоциклетный руль с блестящими рычагами&lt;br&gt;&#xA;✓ Турбо-насадки из латунных труб и шестеренок&lt;br&gt;&#xA;✓ Кожаное седло с выгравированными созвездиями&lt;/p&gt;&#xA;&lt;p&gt;К заднему колесу крепится сумка для писем-снов со:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Светящимися конвертами&lt;/li&gt;&#xA;&lt;li&gt;Свисающими печатями в виде лун&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Особенности дизайна:&lt;/strong&gt;&lt;br&gt;&#xA;• При активации фонарь зажигается голубым пламенем&lt;br&gt;&#xA;• В воздухе появляются мерцающие частицы (как светлячки)&lt;br&gt;&#xA;• Из сумки доносятся шёпот обрывков снов&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Неделя 1: Создание концепт артов первой части Парка Атракционов</title>
+      <link>http://localhost:1313/journal/week1/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/journal/week1/</guid>
+      <description>&lt;h2 id=&#34;что-сделано&#34;&gt;Что сделано:&lt;/h2&gt;&#xA;&lt;p&gt;На этой неделе мы завершили концепт вводной зоны парка — моста, который становится порталом между реальностью и миром снов.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Ключевые элементы:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Арочный мост с разрушенным центром, где обломки застыли в воздухе — первый намёк на искажённую логику сна.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Живой пруд под мостом:&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Вода отражает небо, но при приближении в ней проявляются тени кошмаров.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Прорисвали Аквариум, куда будет проваливаться персонаж при промахе.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Лодки-лебеди с неестественно гибкими шеями, будто следящие за игроком&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Участники</title>
+      <link>http://localhost:1313/team/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/team/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/starsss.png&#34; alt=&#34;Украшение&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Тьютор&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;⭐Соболь Татьяна Сергеевна&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Руководители&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;⭐Илья Корниясов 221-3710&lt;/p&gt;&#xA;&lt;p&gt;⭐Кирилл Емельянов 221-3710&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Программисты&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;⭐Алексей Никольский 211-728 - интеграция моделей и анимации&#xA;⭐Валерия Рынцева 221-379 - управление квестами и накопление очков&lt;br&gt;&#xA;⭐Денис Мартьянов 231-3213 - взаимодействие с ИИ и проработка движений персонажа&lt;br&gt;&#xA;⭐Дмитрий Денисов 231-3213 - иучение механик физики игры&lt;br&gt;&#xA;⭐Дмитрий Парц 231-3213 - реализация управления с геймпада&lt;br&gt;&#xA;⭐Сергей Лапин 221-3711 - создание универсального класса для отдельных предметов&lt;br&gt;&#xA;⭐Михаил Космылин 221-379 - замена экранов и тестирование рычагов, стен, подъемников и т.д.&lt;br&gt;&#xA;⭐Тимур Эким 221-379 - добавление новых механик и исправление основных ошибок&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/my_game/game_guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/my_game/game_guide/</guid>
+      <description>&lt;h1 id=&#34;пошаговое-руководство-по-созданию-star-wars-budget-edition-10-на-sfml&#34;&gt;&lt;strong&gt;Пошаговое руководство по созданию Star Wars Budget Edition 1.0 на SFML&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;p&gt;Введение&#xA;Это руководство по созданию игры Star Wars Budget Edition 1.0.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-подготовка-проекта&#34;&gt;&lt;strong&gt;1. Подготовка проекта&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;11-настройка-окружения&#34;&gt;&lt;strong&gt;1.1. Настройка окружения&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Установила:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Компилятор (GCC/MinGW или MSVC)&lt;/li&gt;&#xA;&lt;li&gt;Библиотеку SFML (через vcpkg или официальный установщик)&lt;/li&gt;&#xA;&lt;li&gt;IDE (VS Code, Visual Studio, CLion)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Создала структуру папок:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/SpaceInvaders&#xD;&#xA;├── Audio/&#xD;&#xA;├── Fonts/&#xD;&#xA;├── Images/&#xD;&#xA;├── include/&#xD;&#xA;└── src/&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Структура проекта&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt; SpaceInvaders/&#xD;&#xA; ├── Audio/&#xD;&#xA; │   ├── back_sound.mp3&#xD;&#xA; │   ├── death_sound.mp3&#xD;&#xA; │   └── tank_shot.mp3&#xD;&#xA; ├── Fonts/&#xD;&#xA; │   └── game_font.ttf&#xD;&#xA; ├── Images/&#xD;&#xA; │   ├── bullet_v2.png&#xD;&#xA; │   ├── character_v2.png&#xD;&#xA; │   ├── deffault_enemy.png&#xD;&#xA; │   ├── spike_enemy.png&#xD;&#xA; │   └── tank_enemy.png&#xD;&#xA; ├── include/&#xD;&#xA; │   ├── Entity_class.h&#xD;&#xA; │   ├── Infinity_mode.h&#xD;&#xA; │   ├── Render.h&#xD;&#xA; │   ├── enemies.h&#xD;&#xA; │   ├── game.h&#xD;&#xA; │   ├── global_variables.h&#xD;&#xA; │   └── sounds.h&#xD;&#xA; └── src/&#xD;&#xA;     └── main.cpp&#xD;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;2-базовые-компоненты-шаг-за-шагом&#34;&gt;&lt;strong&gt;2. Базовые компоненты (шаг за шагом)&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;21-шаг-1-создание-entity_&#34;&gt;&lt;strong&gt;2.1. Шаг 1: Создание Entity_class.h&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// include/Entity_class.h&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#pragma once&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;SFML/Graphics.hpp&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Entity&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;protected&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; health;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    sf&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;Sprite sprite;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Entity(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; hp) &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; health(hp) {}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;draw&lt;/span&gt;(sf&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;RenderWindow&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; window) { window.draw(sprite); }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setSprite&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; sf&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;Sprite&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; spr) { sprite &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; spr; }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;getHealth&lt;/span&gt;() &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; { &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; health; }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Что делаю&lt;/strong&gt;:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/my_game/sfml_technology/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/my_game/sfml_technology/</guid>
+      <description>&lt;h1 id=&#34;технология-создания-игры-space-invaders-на-c-с-использованием-sfml-подробное-исследование&#34;&gt;Технология создания игры Space Invaders на C++ с использованием SFML: подробное исследование&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Введение: почему именно эта технология?&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Когда я впервые задумалась о создании классической аркадной игры, передо мной встал вопрос выбора технологий.&lt;/p&gt;&#xA;&lt;p&gt;Я рассматривала несколько вариантов:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Unity (C#) — мощный движок, но избыточный для простого 2D-проекта.&lt;/li&gt;&#xA;&lt;li&gt;JavaScript + HTML5 Canvas — просто, но не подходит для изучения низкоуровневых аспектов.&lt;/li&gt;&#xA;&lt;li&gt;Python + Pygame — хорош для новичков, но медленный для более сложных игр.&lt;/li&gt;&#xA;&lt;li&gt;C++ с SFML — идеальный баланс между производительностью и простотой.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Почему я выбрала SFML?&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/my_game/technology_guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/my_game/technology_guide/</guid>
+      <description>&lt;h1 id=&#34;полное-руководство-по-созданию-технологии-игры-space-invaders-на-sfml-для-начинающих&#34;&gt;&lt;strong&gt;Полное руководство по созданию технологии игры Space Invaders на SFML для начинающих&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;введение&#34;&gt;Введение&lt;/h2&gt;&#xA;&lt;p&gt;Это руководство предназначено для начинающих разработчиков, желающих создать классическую игру Space Invaders с нуля. Мы будем использовать:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Язык программирования: C++ (стандарт C++17)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Библиотеку: SFML 2.5 (Simple and Fast Multimedia Library)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Среду разработки: Visual Studio Code (или любая другая IDE)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;почему-sfml&#34;&gt;Почему SFML?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Простота: Интуитивно понятный API&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Кроссплатформенность: Работает на Windows, Linux, macOS&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Поддержка мультимедиа: Графика, звук, ввод, сеть&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/reports/artmasters_event_report/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reports/artmasters_event_report/</guid>
+      <description>&lt;h1 id=&#34;отчет-о-посещении-мероприятия-art-masters-научный-креатив-и-креативная-наука-что-первично-в-креативных-индустриях&#34;&gt;Отчет о посещении мероприятия Art Masters «Научный креатив и креативная наука: что первично в креативных индустриях?»&lt;/h1&gt;&#xA;&lt;h2 id=&#34;введение&#34;&gt;Введение&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Цели мероприятия:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Соединение науки и искусства. Демонстрация, как научные методы (например, ИИ, биоарт, сайнс-арт) могут быть инструментами для творчества.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;em&gt;Примеры:&lt;/em&gt; создание генеративного искусства с помощью нейросетей, проекты на стыке биологии и дизайна.&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;Развитие междисциплинарных навыков. Обучение участников применять научные подходы (анализ данных, эксперименты) в креативных индустриях — от дизайна до кино.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Практические воркшопы по использованию технологий (VR, 3D-моделирование) в искусстве.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/reports/career_marathon_report/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reports/career_marathon_report/</guid>
+      <description>&lt;h1 id=&#34;отчет-о-посещении-мероприятия-карьерный-марафон&#34;&gt;Отчет о посещении мероприятия «Карьерный Марафон»&lt;/h1&gt;&#xA;&lt;h2 id=&#34;введение&#34;&gt;Введение&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Цели мероприятия:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;•&#x9;Знакомство с работодателями – студенты могут пообщаться с представителями компаний, узнать о вакансиях и стажировках.&lt;/p&gt;&#xA;&lt;p&gt;•&#x9;Развитие карьерных навыков – проводятся мастер-классы, тренинги и консультации по резюме, собеседованиям и soft skills.&lt;/p&gt;&#xA;&lt;p&gt;•&#x9;Нетворкинг – возможность завести полезные знакомства с профессионалами из разных отраслей.&lt;/p&gt;&#xA;&lt;p&gt;•&#x9;Трудоустройство – некоторые компании проводят собеседования прямо на мероприятии.&lt;/p&gt;&#xA;&lt;p&gt;•&#x9;Профориентация – помогает студентам понять, в каком направлении развиваться.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/reports/chatbot_event_report/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/reports/chatbot_event_report/</guid>
+      <description>&lt;h1 id=&#34;отчет-о-посещении-мероприятия-создание-технического-задания-на-разработку-чат-ботов&#34;&gt;Отчет о посещении мероприятия «Создание технического задания на разработку чат-ботов»&lt;/h1&gt;&#xA;&lt;h2 id=&#34;введение&#34;&gt;Введение&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Цели мероприятия&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Изучение порядка создания технического задания, которое поймет каждый&lt;/li&gt;&#xA;&lt;li&gt;Изучение составных частей базовой структуры технического задания&lt;/li&gt;&#xA;&lt;li&gt;Раскрыть секреты написания хорошего технического задания&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Дата и место проведения&lt;/strong&gt;:&lt;br&gt;&#xA;17 апреля 18:00-20:00 (2 часа), Мультиформатное пространство «Молодёжь Москвы»&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Организаторы&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Академия «Молодежь Москвы»&lt;/li&gt;&#xA;&lt;li&gt;Московский политехнический университет&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;описание-мероприятия&#34;&gt;Описание мероприятия&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Формат мероприятия&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Лекция&lt;/li&gt;&#xA;&lt;li&gt;Мастер-класс&lt;/li&gt;&#xA;&lt;li&gt;Практика&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Спикеры/кураторы&lt;/strong&gt;:&lt;br&gt;&#xA;Уклонский Кирилл - Руководитель проектов департамента разработки и эксплуатации ИТ решений АНО &amp;ldquo;ЦЭМАК&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

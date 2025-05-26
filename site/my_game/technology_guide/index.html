@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ru-ru">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Lifelong Dream</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Полное руководство по созданию технологии игры Space Invaders на SFML для начинающих
+Введение
+Это руководство предназначено для начинающих разработчиков, желающих создать классическую игру Space Invaders с нуля. Мы будем использовать:
+
+
+Язык программирования: C&#43;&#43; (стандарт C&#43;&#43;17)
+
+
+Библиотеку: SFML 2.5 (Simple and Fast Multimedia Library)
+
+
+Среду разработки: Visual Studio Code (или любая другая IDE)
+
+
+Почему SFML?
+
+
+Простота: Интуитивно понятный API
+
+
+Кроссплатформенность: Работает на Windows, Linux, macOS
+
+
+Поддержка мультимедиа: Графика, звук, ввод, сеть">
+    <meta name="generator" content="Hugo 0.147.4">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+  
+    <link rel="stylesheet" href="/css/custom.css">
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/my_game/technology_guide/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/my_game/technology_guide/">
+  <meta property="og:site_name" content="Lifelong Dream">
+  <meta property="og:title" content="Lifelong Dream">
+  <meta property="og:description" content="Полное руководство по созданию технологии игры Space Invaders на SFML для начинающих Введение Это руководство предназначено для начинающих разработчиков, желающих создать классическую игру Space Invaders с нуля. Мы будем использовать:
+Язык программирования: C&#43;&#43; (стандарт C&#43;&#43;17)
+Библиотеку: SFML 2.5 (Simple and Fast Multimedia Library)
+Среду разработки: Visual Studio Code (или любая другая IDE)
+Почему SFML? Простота: Интуитивно понятный API
+Кроссплатформенность: Работает на Windows, Linux, macOS
+Поддержка мультимедиа: Графика, звук, ввод, сеть">
+  <meta property="og:locale" content="ru_ru">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="my_game">
+
+  <meta itemprop="name" content="Lifelong Dream">
+  <meta itemprop="description" content="Полное руководство по созданию технологии игры Space Invaders на SFML для начинающих Введение Это руководство предназначено для начинающих разработчиков, желающих создать классическую игру Space Invaders с нуля. Мы будем использовать:
+Язык программирования: C&#43;&#43; (стандарт C&#43;&#43;17)
+Библиотеку: SFML 2.5 (Simple and Fast Multimedia Library)
+Среду разработки: Visual Studio Code (или любая другая IDE)
+Почему SFML? Простота: Интуитивно понятный API
+Кроссплатформенность: Работает на Windows, Linux, macOS
+Поддержка мультимедиа: Графика, звук, ввод, сеть">
+  <meta itemprop="wordCount" content="1546">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lifelong Dream">
+  <meta name="twitter:description" content="Полное руководство по созданию технологии игры Space Invaders на SFML для начинающих Введение Это руководство предназначено для начинающих разработчиков, желающих создать классическую игру Space Invaders с нуля. Мы будем использовать:
+Язык программирования: C&#43;&#43; (стандарт C&#43;&#43;17)
+Библиотеку: SFML 2.5 (Simple and Fast Multimedia Library)
+Среду разработки: Visual Studio Code (или любая другая IDE)
+Почему SFML? Простота: Интуитивно понятный API
+Кроссплатформенность: Работает на Windows, Linux, macOS
+Поддержка мультимедиа: Графика, звук, ввод, сеть">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Lifelong Dream
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/home/" title="Главная page">
+              Главная
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/about/" title="О проекте page">
+              О проекте
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/resources/" title="Ресурсы page">
+              Ресурсы
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/team/" title="Команда page">
+              Команда
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/journal/" title="Журнал page">
+              Журнал
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/my_game/" title="Моя игра page">
+              Моя игра
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/reports/" title="Мероприятия page">
+              Мероприятия
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Моя игра
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1"></h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="полное-руководство-по-созданию-технологии-игры-space-invaders-на-sfml-для-начинающих"><strong>Полное руководство по созданию технологии игры Space Invaders на SFML для начинающих</strong></h1>
+<h2 id="введение">Введение</h2>
+<p>Это руководство предназначено для начинающих разработчиков, желающих создать классическую игру Space Invaders с нуля. Мы будем использовать:</p>
+<ul>
+<li>
+<p>Язык программирования: C++ (стандарт C++17)</p>
+</li>
+<li>
+<p>Библиотеку: SFML 2.5 (Simple and Fast Multimedia Library)</p>
+</li>
+<li>
+<p>Среду разработки: Visual Studio Code (или любая другая IDE)</p>
+</li>
+</ul>
+<h2 id="почему-sfml">Почему SFML?</h2>
+<ul>
+<li>
+<p>Простота: Интуитивно понятный API</p>
+</li>
+<li>
+<p>Кроссплатформенность: Работает на Windows, Linux, macOS</p>
+</li>
+<li>
+<p>Поддержка мультимедиа: Графика, звук, ввод, сеть</p>
+</li>
+</ul>
+<h2 id="настройка-проекта">Настройка проекта</h2>
+<p><strong>Установка SFML</strong><br>
+Скачайте SFML с официального сайта.</p>
+<p>Для Windows:</p>
+<p>Выберите версию, совместимую с вашим компилятором (GCC/MinGW или Visual Studio).</p>
+<p>Для Linux (Ubuntu/Debian):</p>
+<pre><code>sudo apt-get install libsfml-dev  
+</code></pre>
+<p><strong>Настройка IDE</strong><br>
+Visual Studio Code (Windows/Linux)</p>
+<p>Установите расширения:</p>
+<ul>
+<li>
+<p>C/C++ (от Microsoft)</p>
+</li>
+<li>
+<p>CMake Tools (если используете CMake)</p>
+</li>
+</ul>
+<p>Настройте tasks.json для компиляции с SFML:</p>
+<pre><code>json
+&quot;args&quot;: [
+    &quot;-std=c++17&quot;,
+    &quot;-lsfml-graphics&quot;, &quot;-lsfml-window&quot;, &quot;-lsfml-system&quot;, &quot;-lsfml-audio&quot;
+</code></pre>
+<h2 id="1-основы-графики-в-sfml-объяснение"><strong>1. Основы графики в SFML: объяснение &ldquo;на пальцах&rdquo;</strong></h2>
+<h3 id="11-как-работает-отрисовка-в-sfml"><strong>1.1 Как работает отрисовка в SFML</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// 1. Создаем окно размером 800x600 пикселей с заголовком
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sf<span style="color:#f92672">::</span>RenderWindow window(sf<span style="color:#f92672">::</span>VideoMode(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">600</span>), <span style="color:#e6db74">&#34;Моя первая игра!&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. Главный игровой цикл - работает, пока открыто окно
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">while</span> (window.isOpen()) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 3. Обрабатываем события (закрытие окна, нажатия клавиш)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    sf<span style="color:#f92672">::</span>Event event;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (window.pollEvent(event)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (event.type <span style="color:#f92672">==</span> sf<span style="color:#f92672">::</span>Event<span style="color:#f92672">::</span>Closed)
+</span></span><span style="display:flex;"><span>            window.close(); <span style="color:#75715e">// Закрываем окно при клике на крестик
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 4. Очищаем экран черным цветом
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    window.clear(sf<span style="color:#f92672">::</span>Color<span style="color:#f92672">::</span>Black);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 5. Здесь будем рисовать наши объекты
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 6. Отображаем все, что нарисовали
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    window.display();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Пояснение для новичков:</strong></p>
+<ul>
+<li><code>sf::RenderWindow</code> - это как &ldquo;холст&rdquo; художника, на котором мы рисуем игру</li>
+<li><code>window.clear()</code> - стираем предыдущий кадр (иначе будет наложение)</li>
+<li><code>window.display()</code> - показываем готовый кадр игроку (как перелистывание страницы)</li>
+</ul>
+<h3 id="12-добавляем-спрайт-игрока"><strong>1.2 Добавляем спрайт игрока</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// 1. Создаем текстуру (это как &#34;картинка&#34; в памяти)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sf<span style="color:#f92672">::</span>Texture playerTexture;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>playerTexture.loadFromFile(<span style="color:#e6db74">&#34;player.png&#34;</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Если картинка не загрузилась, выводим ошибку
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Ой, не могу загрузить player.png!&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">// Завершаем программу с ошибкой
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. Создаем спрайт (это &#34;видимая часть&#34; текстуры)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sf<span style="color:#f92672">::</span>Sprite playerSprite;
+</span></span><span style="display:flex;"><span>playerSprite.setTexture(playerTexture); <span style="color:#75715e">// Привязываем текстуру к спрайту
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>playerSprite.setPosition(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">500</span>);    <span style="color:#75715e">// Ставим в центр снизу
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// В игровом цикле, после window.clear():
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>window.draw(playerSprite); <span style="color:#75715e">// Рисуем наш спрайт
+</span></span></span></code></pre></div><p><strong>Разбор сложных моментов:</strong></p>
+<ul>
+<li><code>if (!playerTexture.loadFromFile(...))</code> - проверяем, загрузилась ли текстура</li>
+<li><code>setPosition(400, 500)</code> - координаты (X,Y), где (0,0) - верхний левый угол</li>
+</ul>
+<h2 id="2-управление-игроком-подробный-разбор"><strong>2. Управление игроком: подробный разбор</strong></h2>
+<h3 id="21-обработка-клавиатуры"><strong>2.1 Обработка клавиатуры</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Скорость движения игрока (пикселей в кадр)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> playerSpeed <span style="color:#f92672">=</span> <span style="color:#ae81ff">5.0f</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// В игровом цикле, перед window.clear():
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (sf<span style="color:#f92672">::</span>Keyboard<span style="color:#f92672">::</span>isKeyPressed(sf<span style="color:#f92672">::</span>Keyboard<span style="color:#f92672">::</span>Left)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Двигаем влево (уменьшаем X)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    playerSprite.move(<span style="color:#f92672">-</span>playerSpeed, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (sf<span style="color:#f92672">::</span>Keyboard<span style="color:#f92672">::</span>isKeyPressed(sf<span style="color:#f92672">::</span>Keyboard<span style="color:#f92672">::</span>Right)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Двигаем вправо (увеличиваем X)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    playerSprite.move(playerSpeed, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Объяснение:</strong></p>
+<ul>
+<li><code>isKeyPressed</code> - проверяет, нажата ли клавиша прямо сейчас</li>
+<li><code>move()</code> - изменяет позицию спрайта (X,Y)</li>
+</ul>
+<h3 id="22-ограничение-движения-в-пределах-экрана"><strong>2.2 Ограничение движения в пределах экрана</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Получаем текущую позицию
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sf<span style="color:#f92672">::</span>Vector2f position <span style="color:#f92672">=</span> playerSprite.getPosition();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Проверяем левую границу (X не может быть меньше 0)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (position.x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    playerSprite.setPosition(<span style="color:#ae81ff">0</span>, position.y);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Проверяем правую границу (X не может быть больше 800 - ширина спрайта)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (position.x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">800</span> <span style="color:#f92672">-</span> playerSprite.getGlobalBounds().width) {
+</span></span><span style="display:flex;"><span>    playerSprite.setPosition(<span style="color:#ae81ff">800</span> <span style="color:#f92672">-</span> playerSprite.getGlobalBounds().width, position.y);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Для понимания:</strong></p>
+<ul>
+<li><code>getGlobalBounds()</code> - возвращает прямоугольник, занимаемый спрайтом</li>
+<li><code>.width</code> - ширина этого прямоугольника</li>
+</ul>
+<h2 id="3-система-стрельбы-с-кулдауном"><strong>3. Система стрельбы с кулдауном</strong></h2>
+<h3 id="31-класс-пули"><strong>3.1 Класс пули</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bullet</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Конструктор (создает пулю в позиции X,Y)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Bullet(<span style="color:#66d9ef">float</span> startX, <span style="color:#66d9ef">float</span> startY) {
+</span></span><span style="display:flex;"><span>        shape.setSize(sf<span style="color:#f92672">::</span>Vector2f(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">15</span>)); <span style="color:#75715e">// Размеры 5x15 пикселей
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        shape.setFillColor(sf<span style="color:#f92672">::</span>Color<span style="color:#f92672">::</span>Yellow); <span style="color:#75715e">// Желтый цвет
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        shape.setPosition(startX, startY); <span style="color:#75715e">// Начальная позиция
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        speed <span style="color:#f92672">=</span> <span style="color:#ae81ff">10.0f</span>; <span style="color:#75715e">// Скорость полета
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        active <span style="color:#f92672">=</span> true; <span style="color:#75715e">// Активна ли пуля
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Обновление позиции
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">update</span>() {
+</span></span><span style="display:flex;"><span>        shape.move(<span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span>speed); <span style="color:#75715e">// Двигаем вверх (уменьшаем Y)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Если пуля вышла за верх экрана - деактивируем
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (shape.getPosition().y <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>            active <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Отрисовка
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>(sf<span style="color:#f92672">::</span>RenderWindow<span style="color:#f92672">&amp;</span> window) {
+</span></span><span style="display:flex;"><span>        window.draw(shape);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">isActive</span>() <span style="color:#66d9ef">const</span> { <span style="color:#66d9ef">return</span> active; }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    sf<span style="color:#f92672">::</span>RectangleShape shape; <span style="color:#75715e">// Графическое представление
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">float</span> speed;             <span style="color:#75715e">// Скорость движения
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">bool</span> active;             <span style="color:#75715e">// Активна ли пуля
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
+</span></span></code></pre></div><h3 id="32-стрельба-с-задержкой"><strong>3.2 Стрельба с задержкой</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Где-то в классе Player:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sf<span style="color:#f92672">::</span>Clock shootTimer; <span style="color:#75715e">// Таймер для задержки
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> shootDelay <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.3f</span>; <span style="color:#75715e">// Задержка между выстрелами (0.3 секунды)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>Bullet<span style="color:#f92672">&gt;</span> bullets; <span style="color:#75715e">// Вектор всех пуль
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> Player<span style="color:#f92672">::</span>shoot() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Если прошло достаточно времени с последнего выстрела
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (shootTimer.getElapsedTime().asSeconds() <span style="color:#f92672">&gt;=</span> shootDelay) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Создаем пулю в носу корабля
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        bullets.push_back(Bullet(
+</span></span><span style="display:flex;"><span>            sprite.getPosition().x <span style="color:#f92672">+</span> sprite.getGlobalBounds().width<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">2.5f</span>,
+</span></span><span style="display:flex;"><span>            sprite.getPosition().y
+</span></span><span style="display:flex;"><span>        ));
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Перезапускаем таймер
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        shootTimer.restart();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// В игровом цикле:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>player.update(); <span style="color:#75715e">// Обновляем позицию
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (sf<span style="color:#f92672">::</span>Keyboard<span style="color:#f92672">::</span>isKeyPressed(sf<span style="color:#f92672">::</span>Keyboard<span style="color:#f92672">::</span>Space)) {
+</span></span><span style="display:flex;"><span>    player.shoot(); <span style="color:#75715e">// Пробел - стрельба
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Обновляем все пули
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> bullet : player.bullets) {
+</span></span><span style="display:flex;"><span>    bullet.update();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Удаляем неактивные пули
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>player.bullets.erase(
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>remove_if(
+</span></span><span style="display:flex;"><span>        player.bullets.begin(),
+</span></span><span style="display:flex;"><span>        player.bullets.end(),
+</span></span><span style="display:flex;"><span>        [](<span style="color:#66d9ef">const</span> Bullet<span style="color:#f92672">&amp;</span> b) { <span style="color:#66d9ef">return</span> <span style="color:#f92672">!</span>b.isActive(); }
+</span></span><span style="display:flex;"><span>    ),
+</span></span><span style="display:flex;"><span>    player.bullets.end()
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p><strong>Разбор сложных мест:</strong></p>
+<ul>
+<li><code>shootTimer.getElapsedTime()</code> - сколько времени прошло с последнего выстрела</li>
+<li><code>std::remove_if</code> - магия C++ для удаления неактивных пуль</li>
+<li>Лямбда-функция <code>[](const Bullet&amp; b) {...}</code> - фильтр для удаления</li>
+</ul>
+<h2 id="4-создание-врагов-от-простого-к-сложному"><strong>4. Создание врагов: от простого к сложному</strong></h2>
+<h3 id="41-базовый-класс-врага"><strong>4.1 Базовый класс врага</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Enemy</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    Enemy(<span style="color:#66d9ef">float</span> startX, <span style="color:#66d9ef">float</span> startY) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Настройка внешнего вида
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        shape.setSize(sf<span style="color:#f92672">::</span>Vector2f(<span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">40</span>));
+</span></span><span style="display:flex;"><span>        shape.setFillColor(sf<span style="color:#f92672">::</span>Color<span style="color:#f92672">::</span>Red);
+</span></span><span style="display:flex;"><span>        shape.setPosition(startX, startY);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Начальные параметры
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        speed <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0f</span>;
+</span></span><span style="display:flex;"><span>        health <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">update</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Простое движение вправо-влево
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        shape.move(speed, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Если достигли края - меняем направление и опускаемся
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (shape.getPosition().x <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> 
+</span></span><span style="display:flex;"><span>            shape.getPosition().x <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">800</span> <span style="color:#f92672">-</span> shape.getGlobalBounds().width) {
+</span></span><span style="display:flex;"><span>            speed <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>speed;
+</span></span><span style="display:flex;"><span>            shape.move(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">20</span>); <span style="color:#75715e">// Опускаемся на 20 пикселей
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>(sf<span style="color:#f92672">::</span>RenderWindow<span style="color:#f92672">&amp;</span> window) {
+</span></span><span style="display:flex;"><span>        window.draw(shape);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">isAlive</span>() <span style="color:#66d9ef">const</span> { <span style="color:#66d9ef">return</span> health <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>; }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    sf<span style="color:#f92672">::</span>RectangleShape shape;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">float</span> speed;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> health;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="42-создание-волны-врагов"><strong>4.2 Создание волны врагов</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Где-то в Game классе:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>Enemy<span style="color:#f92672">&gt;</span> enemies;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Создаем 5 рядов по 10 врагов
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> row <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; row <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; <span style="color:#f92672">++</span>row) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> col <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; col <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; <span style="color:#f92672">++</span>col) {
+</span></span><span style="display:flex;"><span>        enemies.push_back(Enemy(
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> col <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>,  <span style="color:#75715e">// X позиция
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#ae81ff">50</span> <span style="color:#f92672">+</span> row <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>    <span style="color:#75715e">// Y позиция
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        ));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// В игровом цикле:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> enemy : enemies) {
+</span></span><span style="display:flex;"><span>    enemy.update();
+</span></span><span style="display:flex;"><span>    enemy.draw(window);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Объяснение позиционирования:</strong></p>
+<ul>
+<li><code>100 + col * 60</code> - начальный отступ 100px, каждый следующий враг через 60px</li>
+<li><code>50 + row * 50</code> - первый ряд на 50px от верха, каждый следующий на 50px ниже</li>
+</ul>
+<h2 id="5-столкновения-пуль-с-врагами"><strong>5. Столкновения пуль с врагами</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Для каждой пули игрока
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> bullet : player.bullets) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>bullet.isActive()) <span style="color:#66d9ef">continue</span>; <span style="color:#75715e">// Пропускаем неактивные
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Для каждого врага
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> enemy : enemies) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>enemy.isAlive()) <span style="color:#66d9ef">continue</span>; <span style="color:#75715e">// Пропускаем мертвых
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Проверяем пересечение
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (bullet.getGlobalBounds().intersects(enemy.getGlobalBounds())) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Попадание!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            enemy.takeDamage(<span style="color:#ae81ff">1</span>); <span style="color:#75715e">// Наносим урон
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            bullet.deactivate(); <span style="color:#75715e">// Уничтожаем пулю
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            score <span style="color:#f92672">+=</span> <span style="color:#ae81ff">10</span>;         <span style="color:#75715e">// Добавляем очки
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">break</span>;               <span style="color:#75715e">// Выходим из цикла по врагам
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Удаляем мертвых врагов
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>enemies.erase(
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>remove_if(
+</span></span><span style="display:flex;"><span>        enemies.begin(),
+</span></span><span style="display:flex;"><span>        enemies.end(),
+</span></span><span style="display:flex;"><span>        [](<span style="color:#66d9ef">const</span> Enemy<span style="color:#f92672">&amp;</span> e) { <span style="color:#66d9ef">return</span> <span style="color:#f92672">!</span>e.isAlive(); }
+</span></span><span style="display:flex;"><span>    ),
+</span></span><span style="display:flex;"><span>    enemies.end()
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p><strong>Как работает проверка столкновений:</strong></p>
+<ul>
+<li><code>getGlobalBounds()</code> - получаем прямоугольник объекта</li>
+<li><code>intersects()</code> - проверяем, пересекаются ли прямоугольники</li>
+</ul>
+<h2 id="6-добавляем-звуки-и-музыку"><strong>6. Добавляем звуки и музыку</strong></h2>
+<h3 id="61-звук-выстрела"><strong>6.1 Звук выстрела</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Где-то при инициализации игры:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sf<span style="color:#f92672">::</span>SoundBuffer shootBuffer;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>shootBuffer.loadFromFile(<span style="color:#e6db74">&#34;shoot.wav&#34;</span>)) {
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Не могу загрузить shoot.wav!&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sf<span style="color:#f92672">::</span>Sound shootSound;
+</span></span><span style="display:flex;"><span>shootSound.setBuffer(shootBuffer);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// В методе shoot():
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>shootSound.play(); <span style="color:#75715e">// Проигрываем звук
+</span></span></span></code></pre></div><h3 id="62-фоновая-музыка"><strong>6.2 Фоновая музыка</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>sf<span style="color:#f92672">::</span>Music bgMusic;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>bgMusic.openFromFile(<span style="color:#e6db74">&#34;background.ogg&#34;</span>)) {
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Не могу загрузить background.ogg!&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>bgMusic.setLoop(true); <span style="color:#75715e">// Зацикливаем
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>bgMusic.setVolume(<span style="color:#ae81ff">50</span>); <span style="color:#75715e">// Уменьшаем громкость (0-100)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>bgMusic.play();        <span style="color:#75715e">// Запускаем
+</span></span></span></code></pre></div><p><strong>Важные нюансы:</strong></p>
+<ul>
+<li><code>.wav</code> - для коротких звуков (выстрелы, взрывы)</li>
+<li><code>.ogg</code> - для музыки (лучше сжимается)</li>
+</ul>
+<h2 id="7-добавляем-интерфейс"><strong>7. Добавляем интерфейс</strong></h2>
+<h3 id="71-отображение-счета"><strong>7.1 Отображение счета</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Загружаем шрифт
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sf<span style="color:#f92672">::</span>Font font;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>font.loadFromFile(<span style="color:#e6db74">&#34;arial.ttf&#34;</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Если шрифт не загрузился, пробуем системный
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    font.loadFromFile(<span style="color:#e6db74">&#34;C:/Windows/Fonts/Arial.ttf&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Создаем текст
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sf<span style="color:#f92672">::</span>Text scoreText;
+</span></span><span style="display:flex;"><span>scoreText.setFont(font);
+</span></span><span style="display:flex;"><span>scoreText.setString(<span style="color:#e6db74">&#34;Score: 0&#34;</span>);
+</span></span><span style="display:flex;"><span>scoreText.setCharacterSize(<span style="color:#ae81ff">24</span>);
+</span></span><span style="display:flex;"><span>scoreText.setFillColor(sf<span style="color:#f92672">::</span>Color<span style="color:#f92672">::</span>White);
+</span></span><span style="display:flex;"><span>scoreText.setPosition(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// В игровом цикле, перед window.display():
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>scoreText.setString(<span style="color:#e6db74">&#34;Score: &#34;</span> <span style="color:#f92672">+</span> std<span style="color:#f92672">::</span>to_string(score));
+</span></span><span style="display:flex;"><span>window.draw(scoreText);
+</span></span></code></pre></div><h3 id="72-экран-game-over"><strong>7.2 Экран Game Over</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Где-то в Game классе:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">bool</span> gameOver <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>sf<span style="color:#f92672">::</span>Text gameOverText;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// При инициализации:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>gameOverText.setFont(font);
+</span></span><span style="display:flex;"><span>gameOverText.setString(<span style="color:#e6db74">&#34;GAME OVER</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Press R to restart&#34;</span>);
+</span></span><span style="display:flex;"><span>gameOverText.setCharacterSize(<span style="color:#ae81ff">48</span>);
+</span></span><span style="display:flex;"><span>gameOverText.setFillColor(sf<span style="color:#f92672">::</span>Color<span style="color:#f92672">::</span>Red);
+</span></span><span style="display:flex;"><span>gameOverText.setPosition(<span style="color:#ae81ff">250</span>, <span style="color:#ae81ff">250</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// В игровом цикле:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (gameOver) {
+</span></span><span style="display:flex;"><span>    window.draw(gameOverText);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (sf<span style="color:#f92672">::</span>Keyboard<span style="color:#f92672">::</span>isKeyPressed(sf<span style="color:#f92672">::</span>Keyboard<span style="color:#f92672">::</span>R)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Перезапуск игры
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        resetGame();
+</span></span><span style="display:flex;"><span>        gameOver <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="8-оптимизация-и-советы"><strong>8. Оптимизация и советы</strong></h2>
+<h3 id="81-используем-texture-atlas"><strong>8.1 Используем Texture Atlas</strong></h3>
+<p>Вместо 50 отдельных файлов - один большой:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// Загружаем атлас
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sf<span style="color:#f92672">::</span>Texture atlas;
+</span></span><span style="display:flex;"><span>atlas.loadFromFile(<span style="color:#e6db74">&#34;spritesheet.png&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Создаем спрайты из разных частей
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sf<span style="color:#f92672">::</span>IntRect playerRect(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>);    <span style="color:#75715e">// Игрок
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sf<span style="color:#f92672">::</span>IntRect enemyRect(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">40</span>);    <span style="color:#75715e">// Враг
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>sf<span style="color:#f92672">::</span>IntRect bulletRect(<span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">15</span>);    <span style="color:#75715e">// Пуля
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>sf<span style="color:#f92672">::</span>Sprite playerSprite(atlas, playerRect);
+</span></span><span style="display:flex;"><span>sf<span style="color:#f92672">::</span>Sprite enemySprite(atlas, enemyRect);
+</span></span><span style="display:flex;"><span>sf<span style="color:#f92672">::</span>Sprite bulletSprite(atlas, bulletRect);
+</span></span></code></pre></div><p><strong>Плюсы:</strong></p>
+<ul>
+<li>Быстрее загрузка</li>
+<li>Меньше переключений текстур при рендеринге</li>
+</ul>
+<h3 id="82-ограничиваем-fps"><strong>8.2 Ограничиваем FPS</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>window.setFramerateLimit(<span style="color:#ae81ff">60</span>); <span style="color:#75715e">// Не более 60 FPS
+</span></span></span></code></pre></div><p><strong>Зачем?</strong> Чтобы игра не работала на 1000 FPS и не грузила процессор.</p>
+<h2 id="9-полный-пример-maincpp"><strong>9. Полный пример main.cpp</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;SFML/Graphics.hpp&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;Player.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;Enemy.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Создаем окно
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    sf<span style="color:#f92672">::</span>RenderWindow window(sf<span style="color:#f92672">::</span>VideoMode(<span style="color:#ae81ff">800</span>, <span style="color:#ae81ff">600</span>), <span style="color:#e6db74">&#34;Space Invaders&#34;</span>);
+</span></span><span style="display:flex;"><span>    window.setFramerateLimit(<span style="color:#ae81ff">60</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Инициализируем игрока
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Player player;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Создаем волну врагов
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>Enemy<span style="color:#f92672">&gt;</span> enemies;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> row <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; row <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; <span style="color:#f92672">++</span>row) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> col <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; col <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; <span style="color:#f92672">++</span>col) {
+</span></span><span style="display:flex;"><span>            enemies.push_back(Enemy(<span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> col <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">50</span> <span style="color:#f92672">+</span> row <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Загружаем шрифт
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    sf<span style="color:#f92672">::</span>Font font;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>font.loadFromFile(<span style="color:#e6db74">&#34;arial.ttf&#34;</span>)) {
+</span></span><span style="display:flex;"><span>        font.loadFromFile(<span style="color:#e6db74">&#34;C:/Windows/Fonts/Arial.ttf&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Текст счета
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    sf<span style="color:#f92672">::</span>Text scoreText;
+</span></span><span style="display:flex;"><span>    scoreText.setFont(font);
+</span></span><span style="display:flex;"><span>    scoreText.setString(<span style="color:#e6db74">&#34;Score: 0&#34;</span>);
+</span></span><span style="display:flex;"><span>    scoreText.setCharacterSize(<span style="color:#ae81ff">24</span>);
+</span></span><span style="display:flex;"><span>    scoreText.setPosition(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> score <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> gameOver <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Главный игровой цикл
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (window.isOpen()) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Обработка событий
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        sf<span style="color:#f92672">::</span>Event event;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (window.pollEvent(event)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (event.type <span style="color:#f92672">==</span> sf<span style="color:#f92672">::</span>Event<span style="color:#f92672">::</span>Closed)
+</span></span><span style="display:flex;"><span>                window.close();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>gameOver) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Обновление игрока
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            player.update();
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Обновление врагов
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> enemy : enemies) {
+</span></span><span style="display:flex;"><span>                enemy.update();
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Проверка столкновений
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// ... (код из раздела 5)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Обновление счета
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            scoreText.setString(<span style="color:#e6db74">&#34;Score: &#34;</span> <span style="color:#f92672">+</span> std<span style="color:#f92672">::</span>to_string(score));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Отрисовка
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        window.clear();
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Рисуем игрока
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        player.draw(window);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Рисуем врагов
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> enemy : enemies) {
+</span></span><span style="display:flex;"><span>            enemy.draw(window);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Рисуем интерфейс
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        window.draw(scoreText);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (gameOver) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Рисуем &#34;Game Over&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// ... (код из раздела 7.2)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        window.display();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Совет:</strong> Разбейте этот код на отдельные файлы (Player.cpp, Enemy.cpp) для удобства!</p>
+<h2 id="10-что-делать-дальше"><strong>10. Что делать дальше?</strong></h2>
+<ol>
+<li>Добавьте разные типы врагов</li>
+<li>Реализуйте систему уровней</li>
+<li>Добавьте бонусы (дополнительная жизнь, усиление оружия)</li>
+<li>Сделайте меню паузы</li>
+<li>Добавьте анимации взрывов</li>
+</ol>
+<p>Помните: лучший способ научиться - экспериментировать! Попробуйте изменить параметры, посмотрите что получится. Удачи в разработке! 🚀</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  Lifelong Dream 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
